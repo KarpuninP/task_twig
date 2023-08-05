@@ -1,0 +1,26 @@
+<table class="table table-bordered table-striped">
+    <thead class="thead-light">
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Secret Identity</th>
+        <th>Powers</th>
+    </tr>
+    </thead>
+    <tbody >
+    {% for item in data %}
+        <tr>
+            <td>{{ item.name }}</td>
+            <td>{{ item.age }}</td>
+            <td>{{ item.secretIdentity }}</td>
+            <td>
+                <ul>
+                    {% for power in item.powers %}
+                        <li>{{ power }}</li>
+                    {% endfor %}
+                </ul>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
